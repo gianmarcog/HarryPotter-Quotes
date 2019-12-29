@@ -10,12 +10,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        VStack {
         MainView()
+            
+        Spacer()
+        }.background(Image("motivation_bg")
+            .resizable()
+            .scaledToFill()
+            .edgesIgnoringSafeArea(.all))
     }
 }
 
 struct MainView: View {
-    let quote = ["quote1","quote2","quote1","quote2","quote1","quote2"]
+    let quotes = ["quote1","quote2","quote1","quote2","quote1","quote2"]
     
     var body: some View {
         VStack {
@@ -30,15 +37,21 @@ struct MainView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     HStack {
-                        ForEach(self.quote, id: \.self) {
-                            quote in
+                        ForEach(self.quotes, id: \.self) {
+                                quote in
                             VStack {
-                                Image(systemName: "a.square.fill")
-                                    .resizable()
-                                    .frame(width: 100, height: 100)
-                                
+                                CircleImage(imageName: "lilly")
                                 Text(quote)
-                            }
+                                
+                                Divider()
+                                
+                                Text("By - Harry Potter")
+                                .italic()
+                                    .font(.custom("Helvetica neue", size: 14))
+                            }.frame(width:300, height: 300)
+                                .foregroundColor(.gray)
+                                .padding(.all, 4)
+                                .background(Color.white)
                         }
                     }
                 }
@@ -47,6 +60,20 @@ struct MainView: View {
     }
 }
 
+struct CircleImage: View {
+    var imageName: String
+    var body: some View {
+       
+            Image(imageName)
+                .resizable()
+                .clipShape(Circle())
+                .overlay(Circle()
+                    .stroke(Color.gray, lineWidth: 2))
+                .shadow(radius: 3)
+                .frame(width: 60, height: 60)
+        
+    }
+}
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
