@@ -14,6 +14,7 @@ struct ContentView: View {
             // The living body of the App
         MainView()
             
+            // Stretch the layout
         Spacer()
         }.background(Image("motivation_bg")
             .resizable()
@@ -23,6 +24,8 @@ struct ContentView: View {
 }
 
 struct MainView: View {
+    
+    //Array for the quotes
     let quotes = ["quote1","quote2","quote1","quote2","quote1","quote2"]
     
     var body: some View {
@@ -43,7 +46,8 @@ struct MainView: View {
                             VStack {
                                 CircleImage(imageName: "lilly")
                                 Text(quote)
-                                
+                            
+                                //Make the visual line 
                                 Divider()
                                 
                                 Text("By - Harry Potter")
