@@ -24,6 +24,7 @@
 		912C17B423B6CD670027DC79 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		912C17B723B6CD670027DC79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		912C17B923B6CD670027DC79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9197FC58240C7C8000E136DF /* Step By Step.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Step By Step.md"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +64,7 @@
 				912C17B623B6CD670027DC79 /* LaunchScreen.storyboard */,
 				912C17B923B6CD670027DC79 /* Info.plist */,
 				912C17B323B6CD670027DC79 /* Preview Content */,
+				9197FC58240C7C8000E136DF /* Step By Step.md */,
 			);
 			path = "HarryPotter-Quotes";
 			sourceTree = "<group>";
