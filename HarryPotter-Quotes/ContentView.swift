@@ -11,6 +11,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
+            // The living body of the App
         MainView()
             
         Spacer()
