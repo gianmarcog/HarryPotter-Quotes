@@ -11,8 +11,13 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            // The living body of the App
-        MainView()
+       
+            CircleImage(imageName: "lilly")
+            .frame(width: 160, height: 160)
+            .padding(.top, 89)
+            .padding(.bottom, 20)
+        
+            MainView()
             
         Spacer()
         }.background(Image("motivation_bg")
@@ -57,6 +62,12 @@ struct MainView: View {
                                 .foregroundColor(.gray)
                                 .padding(.all, 4)
                                 .background(Color.white)
+                            .cornerRadius(13)
+                            .overlay(Rectangle()
+                                .fill(
+                                    LinearGradient(gradient: Gradient(colors: [.clear,.pink]), startPoint: .center, endPoint: .topLeading))
+                                .clipped()
+                                .shadow(radius: 10))
                         }
                     }
                 }
