@@ -9,6 +9,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var quotes: [Quote] = [
+           Quote(quote: "First Quote", name: "Robert"),
+           Quote(quote: "Second Quote", name: "Peter"),
+           Quote(quote: "Third Quote", name: "Susan"),
+           Quote(quote: "Fourth Quote", name: "Ellen"),
+           Quote(quote: "Fith Quote", name: "Oprah"),
+           Quote(quote: "Sixth Quote", name: "Sherlock")
+       ]
+    
     var body: some View {
         VStack {
        
@@ -17,7 +27,7 @@ struct ContentView: View {
             .padding(.top, 89)
             .padding(.bottom, 20)
         
-            MainView()
+            MainView(quotes: quotes)
             
         Spacer()
         }.background(Image("motivation_bg")
@@ -30,8 +40,7 @@ struct ContentView: View {
 
 struct MainView: View {
     
-    //Array for the quotes
-    let quotes = ["quote1","quote2","quote1","quote2","quote1","quote2"]
+    var quotes: [Quote]
     
     var body: some View {
         VStack {
@@ -46,16 +55,16 @@ struct MainView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     HStack {
-                        ForEach(self.quotes, id: \.self) {
+                        ForEach(self.quotes, id: \.id) {
                                 quote in
                             VStack {
                                 CircleImage(imageName: "lilly")
-                                Text(quote)
+                                Text(quote.quote)
                             
                                 //Make the visual line 
                                 Divider()
                                 
-                                Text("By - Harry Potter")
+                                Text("By - \(quote.name)")
                                 .italic()
                                     .font(.custom("Helvetica neue", size: 14))
                             }.frame(width:300, height: 300)
