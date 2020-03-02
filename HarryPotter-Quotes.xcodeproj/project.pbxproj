@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91020150240DC2DA00CBDC69 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9102014F240DC2DA00CBDC69 /* Quote.swift */; };
 		912C17AC23B6CD640027DC79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912C17AB23B6CD640027DC79 /* AppDelegate.swift */; };
 		912C17AE23B6CD640027DC79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912C17AD23B6CD640027DC79 /* SceneDelegate.swift */; };
 		912C17B023B6CD640027DC79 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912C17AF23B6CD640027DC79 /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9102014F240DC2DA00CBDC69 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		912C17A823B6CD640027DC79 /* HarryPotter-Quotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HarryPotter-Quotes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		912C17AB23B6CD640027DC79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		912C17AD23B6CD640027DC79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +40,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9102014E240DC24F00CBDC69 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9102014F240DC2DA00CBDC69 /* Quote.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		912C179F23B6CD640027DC79 = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +67,7 @@
 		912C17AA23B6CD640027DC79 /* HarryPotter-Quotes */ = {
 			isa = PBXGroup;
 			children = (
+				9102014E240DC24F00CBDC69 /* Model */,
 				912C17AB23B6CD640027DC79 /* AppDelegate.swift */,
 				912C17AD23B6CD640027DC79 /* SceneDelegate.swift */,
 				912C17AF23B6CD640027DC79 /* ContentView.swift */,
@@ -149,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				912C17AC23B6CD640027DC79 /* AppDelegate.swift in Sources */,
+				91020150240DC2DA00CBDC69 /* Quote.swift in Sources */,
 				912C17AE23B6CD640027DC79 /* SceneDelegate.swift in Sources */,
 				912C17B023B6CD640027DC79 /* ContentView.swift in Sources */,
 			);
