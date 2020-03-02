@@ -14,12 +14,12 @@ struct ContentView: View {
             // The living body of the App
         MainView()
             
-            // Stretch the layout
         Spacer()
         }.background(Image("motivation_bg")
             .resizable()
             .scaledToFill()
-            .edgesIgnoringSafeArea(.all))
+            .edgesIgnoringSafeArea(.all)
+            )
     }
 }
 
