@@ -71,3 +71,18 @@ Function is necessary the show the App live time by the preview
 ```
 struct ContentView_Previews: PreviewProvider {
 ```
+---
+The overlay covers the first view like a second layer
+```
+overlay(Rectangle())
+```
+---
+Inside a colar gradient you can choose the gradient color.
+```
+ LinearGradient(gradient: Gradient(colors: [.clear,.pink]), startPoint: .center, endPoint: .topLeading))
+```
+---
+Clips the view to its bounding rectangular frame.
+```
+.clipped()
+```
