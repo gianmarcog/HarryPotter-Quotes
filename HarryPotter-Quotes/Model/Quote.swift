@@ -9,8 +9,7 @@
 import Foundation
 import SwiftUI
 
-struct Quote : Identifiable {
-    var id = UUID()
+struct Quote : Hashable, Decodable {
     var quote: String
     var name: String
 }
