@@ -10,14 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var quotes: [Quote] = [
-           Quote(quote: "First Quote", name: "Robert"),
-           Quote(quote: "Second Quote", name: "Peter"),
-           Quote(quote: "Third Quote", name: "Susan"),
-           Quote(quote: "Fourth Quote", name: "Ellen"),
-           Quote(quote: "Fith Quote", name: "Oprah"),
-           Quote(quote: "Sixth Quote", name: "Sherlock")
-       ]
+    var quotes : [Quote]
     
     var body: some View {
         VStack {
@@ -46,7 +39,7 @@ struct MainView: View {
         VStack {
             
             HStack {
-                Text("Harry Potter Quotes App")
+                Text("\(self.quotes.count) Harry Potter Quotes Available")
                     .font(.subheadline)
                     .italic()
                     .foregroundColor(.orange)
@@ -55,11 +48,12 @@ struct MainView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     HStack {
-                        ForEach(self.quotes, id: \.id) {
+                        ForEach(self.quotes, id: \.name) {
                                 quote in
                             VStack {
                                 CircleImage(imageName: "lilly")
-                                Text(quote.quote)
+                                 Text(#" "\#(quote.quote) " "#)
+                                    .font(.headline)
                             
                                 //Make the visual line 
                                 Divider()
@@ -99,8 +93,8 @@ struct CircleImage: View {
         
     }
 }
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView(quotes: quoteData)
+//    }
+//}
