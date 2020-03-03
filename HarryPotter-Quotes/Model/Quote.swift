@@ -12,4 +12,5 @@ import SwiftUI
 struct Quote : Hashable, Decodable {
     var quote: String
     var name: String
+    var personImage: String 
 }
