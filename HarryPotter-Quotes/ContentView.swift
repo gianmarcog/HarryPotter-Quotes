@@ -14,18 +14,19 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-       
-            CircleImage(imageName: "lilly")
+
+                CircleImage(imageName: "hogwarts")
             .frame(width: 160, height: 160)
             .padding(.top, 89)
             .padding(.bottom, 20)
-        
+
             MainView(quotes: quotes)
+            
             
         Spacer()
         }.background(Image("motivation_bg")
             .resizable()
-            .scaledToFill()
+            
             .edgesIgnoringSafeArea(.all)
             )
     }
@@ -42,7 +43,8 @@ struct MainView: View {
                 Text("\(self.quotes.count) Harry Potter Quotes Available")
                     .font(.subheadline)
                     .italic()
-                    .foregroundColor(.orange)
+                    .bold()
+                    .foregroundColor(.white)
             }
             
             ScrollView(.horizontal, showsIndicators: false) {
@@ -51,7 +53,7 @@ struct MainView: View {
                         ForEach(self.quotes, id: \.name) {
                                 quote in
                             VStack {
-                                CircleImage(imageName: "lilly")
+                                CircleImage(imageName: quote.personImage)
                                  Text(#" "\#(quote.quote) " "#)
                                     .font(.headline)
                             
@@ -70,7 +72,7 @@ struct MainView: View {
                                 .fill(
                                     LinearGradient(gradient: Gradient(colors: [.clear,.pink]), startPoint: .center, endPoint: .topLeading))
                                 .clipped()
-                                .shadow(radius: 10))
+                                .shadow(radius: 1))
                         }
                     }
                 }
